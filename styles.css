@@ -1,3 +1,11 @@
+* {
+    margin: 0;
+}
+
+body {
+    margin: 0 auto;
+}
+
 h1 {
     font-family: "Xanh Mono", Georgia, serif;
     font-size: 60px;
@@ -15,8 +23,109 @@ h3 {
     font-size: 22px;
 }
 
+h4 {
+    font-family: "Manrope", Arial, sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+}
+
 p {
     font-family: "Manrope", Arial, sans-serif;
     font-weight: 300;
     font-size: 18px;
+}
+
+a {
+    font-family: "Manrope", Arial, sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    color: #007BFF;
+    text-decoration: none;
+}
+
+ul {
+    font-family: "Manrope", Arial, sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    list-style-type: circle;
+    padding: .25em 1em;
+}
+
+li {
+    font-family: "Manrope", Arial, sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+}
+
+ol {
+    padding: 0.25em 1em;
+}
+
+.recipe-page-container {
+    margin: 5em auto;
+    max-width: 1400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.recipe-page-header {
+    /*background-color: #e6e6e6;*/
+    margin: 3em 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+    gap: 50px;
+}
+
+.recipe-header-text h1 {
+    margin-bottom: 0.1em;
+}
+
+.recipe-page-header p {
+    margin: .25em 0;
+    width: 100%;
+}
+
+.recipe-info-card {
+    background-color:blanchedalmond;
+    padding: 1em 1.5em;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5em;
+}
+
+.recipe-info-card p {
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.recipe-info-card .recipe-reviews {
+    display: flex;
+    align-items: center;
+    gap: 0.25em;
+}
+
+.recipe-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.recipe-image {
+    width: 600px;
+    height: auto;
+}
+
+.ingredients-card, .instructions-card {
+    background-color: #e6e6e6;
+    margin: 1em 0;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    max-width: 25%;
+    border-radius: 1em;
 }
