@@ -74,27 +74,54 @@ ol {
     margin: 3em 0;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    align-items: start;
+    align-items: center;
     gap: 50px;
 }
 
-.recipe-header-text h1 {
-    margin-bottom: 0.1em;
+.recipe-header-text {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: space-between;
+    gap: 0.75em;
 }
 
-.recipe-page-header p {
-    margin: .25em 0;
-    width: 100%;
+.date {
+    color: gray;
+    font-size: 16px;
 }
 
 .recipe-info-card {
-    background-color:blanchedalmond;
+    background-color: hsla(35, 100%, 55%, 1);
     padding: 1em 1.5em;
     border-radius: 16px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    gap: 2em;
+}
+
+.card-top {
+    display: flex;
+    gap: 1em;
+    justify-content: space-between;
+}
+
+.recipe-reviews {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    color: white;
+}
+
+.recipe-reviews h4 {
+    white-space: nowrap;
+}
+
+.recipe-time {
+    display: flex;
     align-items: center;
     gap: 0.5em;
+    color: white;
 }
 
 .recipe-info-card p {
@@ -103,10 +130,39 @@ ol {
     display: flex;
 }
 
-.recipe-info-card .recipe-reviews {
+.macros {
     display: flex;
+    gap: 20px;
+    align-items: stretch;
+    justify-content: start;
+    color: white;
+}
+
+.macros h3 {
+    font-size: 2.5em;
+    font-weight: 600;
+    font-kerning: auto;
+    letter-spacing: -0.02em;
+}
+
+.macros p {
+    font-size: .8em;
+    font-weight: 300;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+.recipe-calories, .recipe-protein, .recipe-carbs, .recipe-fat{
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 0.25em;
+}
+
+.line {
+    width: 2.5px;
+    height: 75px;
+    border-radius: 1em;
+    background-color: white;
 }
 
 .recipe-image img {
@@ -116,16 +172,59 @@ ol {
 }
 
 .recipe-image {
-    width: 600px;
+    width: 90vh;
     height: auto;
 }
 
-.ingredients-card, .instructions-card {
-    background-color: #e6e6e6;
-    margin: 1em 0;
-    padding: 1em;
+.how-to-make {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: start;
+}
+
+.how-to-make h2 {
+    color: hsla(18, 46%, 21%, 1);
+}
+
+.ingredients, .instructions {
     display: flex;
     flex-direction: column;
-    max-width: 25%;
+    align-items: center;
+    gap: 1em;
+}   
+
+.ingredients-card, .instructions-card {
+    padding: 1em;
     border-radius: 1em;
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+}
+
+.ingredients-card li, .instructions-card li {
+    font-weight: 600;
+    line-height: 2em;
+}
+
+.ingredients-card {
+    background-color: hsla(35, 100%, 55%, 1);
+    color: white;
+}
+
+.ingredients-card ul {
+    list-style-type: none;
+}
+
+.instructions-card {
+    border: 2.5px solid hsla(24, 76%, 50%, 1);
+}
+
+.instructions-card li {
+    color: hsla(24, 76%, 50%, 1);
+    line-height: 1.5em;
+}
+
+.footer {
+    margin: 5em 0;
 }
