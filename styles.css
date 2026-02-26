@@ -7,8 +7,22 @@ body {
 }
 
 .home-link {
-    margin: 2em;
-    
+    margin: 0 auto;
+    padding: 2em;
+    background-color: hsla(35, 100%, 55%, 1);
+    display: flex;
+    justify-content: center;
+}
+
+.home-link a {
+    font-family: "Xanh Mono", Georgia, serif;
+    font-size: 24px;
+    color: white;
+    text-decoration: none;
+}
+
+.home-link a:hover {
+    text-decoration: underline;
 }
 
 h1 {
@@ -75,7 +89,7 @@ ol {
 }
 
 .recipe-page-header {
-    margin: 5em 0;
+    margin: 0;
     display: grid;
     grid-template-columns: 1fr 1.5fr;
     align-items: center;
@@ -111,17 +125,17 @@ ol {
 
 .recipe-info-card {
     background-color: hsla(35, 100%, 55%, 1);
-    padding: 1.5em 3em;
+    padding: 3em 3em;
     border-radius: 0 1em 1em 0;
     display: flex;
     flex-direction: column;
     gap: 2em;
     box-shadow:
-      8px 8px 20px hsl(35deg 60% 50% / 0.33);
+      8px 8px 20px hsla(35, 87%, 15%, 0.20);
     position: absolute;
     left: 0;
     bottom: 0;
-    transform: translateY(50%);
+    transform: translateY(80%);
     width: 700px;
     z-index: 10;
 }
@@ -194,6 +208,10 @@ ol {
 .btn-section {
     display: flex;
     gap: 1em;
+    position: absolute;
+    left: 17%;
+    bottom: 0;
+    transform: translateX(100%) translateY(50%);
 }
 
 .btn-section a {
@@ -203,12 +221,14 @@ ol {
     border-radius: .5em;
     font-weight: 600;
     font-size: 16px;
+    border: 1.25px solid hsla(18, 46%, 21%, 1);
 }
 
 .btn-section a:hover {
     box-shadow:
-      5px 5px 10px hsl(35deg 60% 50% / 0.4); 
-    transition: 0.3s ease-in-out;
+      3px 3px 10px hsla(35, 87%, 15%, 0.2); 
+    transition: all 0.3s ease-out;
+    background-color: hsla(35, 100%, 98%, 1);
 }
 
 .recipe-image img {
@@ -224,11 +244,44 @@ ol {
     min-height: 600px;
 }
 
+.servings {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    align-items: center;
+    justify-content: center;
+    grid-column: 2 / 3;
+    grid-row: 2;
+    position: absolute;
+    left: 5%;
+    bottom: 0;
+    transform: translateX(100%) translateY(100%);
+}
+
+.servings h2 {
+    color: hsla(18, 46%, 21%, 1);
+}
+
+.servings p {
+    font-size: 20px;
+    font-weight: 600;
+    padding: 16px 24px;
+    border-radius: 0 0% 10px 10px;
+    background-color: hsla(35, 100%, 55%, 1);
+    color: white;
+}
+
+.servings p:hover {
+    color: hsla(18, 46%, 21%, 1);
+    transition: all 0.3s ease-out;
+}
+
 .how-to-make {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 50px;
     align-items: start;
+    margin-top: 200px;
 }
 
 .how-to-make h2 {
