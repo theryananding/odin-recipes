@@ -228,7 +228,8 @@ ol {
     box-shadow:
       3px 3px 10px hsla(35, 87%, 15%, 0.2); 
     transition: all 0.3s ease-out;
-    background-color: hsla(35, 100%, 98%, 1);
+    background-color: hsla(35, 100%, 95%, 1);
+    border: 1.25px solid hsla(35, 100%, 55%, 1);
 }
 
 .recipe-image img {
@@ -281,7 +282,7 @@ ol {
     grid-template-columns: 1fr 1fr;
     gap: 50px;
     align-items: start;
-    margin-top: 200px;
+    margin: 200px 0 125px 0;
 }
 
 .how-to-make h2 {
@@ -326,6 +327,77 @@ ol {
 .instructions-card li {
     color: hsla(24, 76%, 50%, 1);
     line-height: 1.5em;
+}
+
+.more-recipes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+    margin: 0 2em 0 2em;
+}
+
+.recipe-card-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1em;
+}
+
+.recipe-card-ind {
+    display: grid;
+    grid-template-rows: minmax(0, 1fr) auto;
+    border-radius: 1em;
+    border: 2.5px solid hsla(24, 76%, 50%, 1);
+    overflow: hidden;
+    position: relative;
+}
+
+.recipe-card-ind > img {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 2 / 3;
+    display: block;
+    border-radius: .5em;
+    object-fit: cover;
+}
+
+.recipe-info, .recipe-card-ind img {
+    grid-area: 1 /1;
+}
+
+.recipe-info {
+    align-self: end;
+    justify-self: center;
+    margin-bottom: 2rem;
+    background-color: white;
+    width: 80%;
+    padding: 16px;
+    border-radius: .5em;
+    box-shadow:
+      8px 8px 20px hsla(36, 100%, 3%, 0.33);
+}
+
+.recipe-info p {
+    font-size: 14px;
+    text-align: center;
+    color: hsla(26, 46%, 40%, 1);
+}
+
+.recipe-info h3 {
+    font-weight: 600;
+    line-height: 1.1em;
+    text-align: center;
+    color: hsla(21, 99%, 45%, 1);
+}
+
+.line {
+    margin: 8px auto;
+    width: 80%;
+    height: 2px;
+    border-radius: 1em;
+    background-color: hsla(28, 100%, 76%, 1);
 }
 
 .footer {
