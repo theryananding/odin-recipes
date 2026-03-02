@@ -173,8 +173,9 @@ ol {
 .macros {
     display: flex;
     gap: 20px;
-    align-items: stretch;
+    align-items: center;
     justify-content: start;
+    flex-direction: row;
     color: white;
 }
 
@@ -192,7 +193,7 @@ ol {
     text-transform: uppercase;
 }
 
-.recipe-calories, .recipe-protein, .recipe-carbs, .recipe-fat{
+.recipe-calories, .recipe-protein, .recipe-carbs, .recipe-fat {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -335,17 +336,18 @@ ol {
     align-items: center;
     gap: 1em;
     margin: 0 2em 0 2em;
+    color: hsla(18, 46%, 21%, 1);
 }
 
 .recipe-card-container {
     display: flex;
     flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
     gap: 1em;
 }
 
 .recipe-card-ind {
+    flex: 1 1 0;
+    min-width: 0;
     display: grid;
     grid-template-rows: minmax(0, 1fr) auto;
     border-radius: 1em;
@@ -392,12 +394,85 @@ ol {
     color: hsla(21, 99%, 45%, 1);
 }
 
-.line {
+.line-more-recipes {
     margin: 8px auto;
     width: 80%;
     height: 2px;
     border-radius: 1em;
     background-color: hsla(28, 100%, 76%, 1);
+}
+
+.btn-more-recipes {
+    padding: .75em 2.25em;
+    background-color: hsla(21, 99%, 45%, 1);
+    color: white;
+    border-radius: .5em;
+    font-weight: 400;
+    font-size: 16px;
+    text-transform: uppercase;
+    border: none;
+}
+
+.btn-more-recipes:hover {
+    box-shadow:
+      3px 3px 10px hsla(35, 87%, 15%, 0.2); 
+    transition: all 0.3s ease-out;
+    background-color: hsla(21, 99%, 45%, 0.8);
+}
+
+.reviews {
+    background-color: hsla(30, 43%, 95%, 1);
+    padding: 4em;
+    border-radius: 2em;
+    width: 75%;
+    display: flex;
+    margin: 4em auto;
+    box-shadow:
+      3px 3px 10px hsla(35, 87%, 15%, 0.2); 
+}
+
+.reviews-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 4em;
+    color: hsla(18, 46%, 21%, 1);
+}
+
+.rating {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+.reviews-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    color: hsla(18, 46%, 21%, 1);
+}
+
+.stars {
+    display: flex;
+    flex-direction: row;
+}
+
+.star {
+    width: 25px;
+    height: 25px;
+    fill: hsla(26, 46%, 40%, 1);
+    padding: 0;
+}
+
+.review-ind {
+    display: flex;
+    flex-direction: column;
+    gap: .75em;
+}
+
+.review-ind h4 {
+    font-weight: 600;
 }
 
 .footer {
