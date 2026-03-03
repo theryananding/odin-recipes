@@ -58,7 +58,7 @@ a {
     font-family: "Manrope", Arial, sans-serif;
     font-weight: 300;
     font-size: 18px;
-    color: #007BFF;
+    color: white;
     text-decoration: none;
 }
 
@@ -153,8 +153,8 @@ ol {
     color: white;
 }
 
-.recipe-reviews h4 {
-    white-space: nowrap;
+.recipe-reviews a:hover {
+    text-decoration: underline;
 }
 
 .recipe-time {
@@ -334,7 +334,7 @@ ol {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1em;
+    gap: 2em;
     margin: 0 2em 0 2em;
     color: hsla(18, 46%, 21%, 1);
 }
@@ -402,7 +402,7 @@ ol {
     background-color: hsla(28, 100%, 76%, 1);
 }
 
-.btn-more-recipes {
+.btn-more-recipes, .btn-review {
     padding: .75em 2.25em;
     background-color: hsla(21, 99%, 45%, 1);
     color: white;
@@ -413,7 +413,7 @@ ol {
     border: none;
 }
 
-.btn-more-recipes:hover {
+.btn-more-recipes:hover, .btn-review:hover {
     box-shadow:
       3px 3px 10px hsla(35, 87%, 15%, 0.2); 
     transition: all 0.3s ease-out;
@@ -434,7 +434,7 @@ ol {
 .reviews-header {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: start;
     justify-content: space-between;
     margin-bottom: 4em;
     color: hsla(18, 46%, 21%, 1);
@@ -449,8 +449,23 @@ ol {
 .reviews-container {
     display: flex;
     flex-direction: column;
-    gap: 2em;
+    gap: 4em;
     color: hsla(18, 46%, 21%, 1);
+    margin-bottom: 4em;
+}
+
+.review-page {
+    display: flex;
+    justify-content: center;
+
+}
+
+.review-page p {
+    text-transform: uppercase;
+    color: hsla(18, 46%, 21%, 1);
+    border: solid 1px hsla(18, 46%, 21%, 1);
+    padding: 0.5em 1em;
+    border-radius: 0.5em;
 }
 
 .stars {
@@ -475,6 +490,73 @@ ol {
     font-weight: 600;
 }
 
+.review-form {
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    margin: 0 auto;
+    border: solid 2.25px #FF7700;
+    border-radius: 1em;
+    padding: 4em;
+}
+
+.review-form-header {
+    display: flex;
+    flex-direction: column;
+    color: hsla(18, 46%, 21%, 1);
+}
+
+.review-form p, .review-form label {
+    color: #FF7700;
+    font-weight: 500;
+}
+
+.review-form form {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 1em;
+}
+
+.review-form form p {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+input, textarea {
+    font: inherit;
+    font-size: 16px;
+    box-sizing: border-box;
+    border: solid 2px #FF7700;
+    border-radius: 0.5em;
+    padding: 0.5em;
+}
+
+textarea {
+    vertical-align: top;
+    height: 10em;
+    width: 75%;
+    min-width: 300px;
+}
+
+input {
+    vertical-align: top;
+    height: 3em;
+    width: 300px;
+}
+
+input:focus, textarea:focus {
+    outline: solid 1px hsla(18, 46%, 21%, 1);
+    border: solid 1px hsla(18, 46%, 21%, 1);
+}
+
 .footer {
-    margin: 5em 0;
+    margin: 5em auto;
+}
+
+.footer a {
+    color:#E35205;
+    font-weight: 500;
 }
